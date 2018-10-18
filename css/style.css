@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body {
+    background: #eee;
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.centered {
+    text-align: center;
+}
+
+p, .mono {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+img.rounded {
+    border-radius: 50%;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
