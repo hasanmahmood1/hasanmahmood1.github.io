@@ -13,6 +13,18 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+.segment {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .centered {
     text-align: center;
 }
@@ -29,4 +41,19 @@ img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+img.middle {
+    transform: translateY(35%);
+}
+
+.muted {
+    color: grey;
+}
+
+.hline {
+ 	width: 20px;
+	margin: 3px;
+	padding-left: 20%;
+	border-bottom: 5px dashed black;
 }
