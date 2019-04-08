@@ -25,3 +25,16 @@
     background: linear-gradient(135deg, rgba(24,42,115,1) 0%, rgba(33,138,174,1) 69%,
     			       rgba(32,167,172,1) 89%)!important;
 }
+
+.bio {
+    display: inline-block;
+    width: 350px;
+    font-size: 18px;
+    color: white;
+}
+.bio .quote {
+    display: inline-block;
+    position: relative;
+    top: -8px;
+    color: #efcd83;
+}
