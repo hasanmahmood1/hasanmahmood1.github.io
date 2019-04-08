@@ -13,9 +13,16 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap	
 collections:		
-  - research-projects
-  - coding-projects
-  
+  research-projects:
+    output: true
+  coding-projects:
+    output: false
+
+default:
+  - scope:
+      path: ""
+      type: "research-projects"
+      
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

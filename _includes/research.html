@@ -5,12 +5,15 @@
       <i class="lab icon"></i>
       <div class="sub header">I work with</div>
     </h2>
-    <div class="ui segments">
+    <div class="ui raised segments">
       {% for project in site.research-projects %}
-      <div class="ui segment">
-      	<div class="ui dividing header">{{ project.title }}</div>
+      <div class="ui clearing segment">
+      	<div class="ui header">{{ project.title }}
+	</div>
 	<p>{{ project.description }}</p>
-	<h4 class="ui header">Publications:</h4>
+	<a class="ui mini basic blue right floated button" href="{{ project.url }}">
+	  read more
+	</a>
       </div>
       {% endfor %}
     </div>
