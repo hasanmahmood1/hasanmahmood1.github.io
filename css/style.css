@@ -1,3 +1,19 @@
+.ui.masthead.segment {
+    background: linear-gradient(135deg, rgba(24,42,115,1) 0%, rgba(33,138,174,1) 69%,
+    			       rgba(32,167,172,1) 89%)!important;
+    min-height: 70vh;
+}
+
+#teaching {
+    min-height: 60vh;
+}
+#research {
+    min-height: 50vh;
+    background: linear-gradient(45deg, rgba(14,21,58,1) 0%,
+				rgba(115,107,147,1) 48%,
+    				rgba(243,201,215,1) 100%);    
+}
+
 .laptop {
     display: inherit;
 }
@@ -20,10 +36,6 @@
     .mobile {
 	display: inherit;
     }
-}
-.ui.masthead.segment {
-    background: linear-gradient(135deg, rgba(24,42,115,1) 0%, rgba(33,138,174,1) 69%,
-    			       rgba(32,167,172,1) 89%)!important;
 }
 
 .bio {
