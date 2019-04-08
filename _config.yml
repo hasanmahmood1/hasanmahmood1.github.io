@@ -18,10 +18,12 @@ collections:
   coding-projects:
     output: false
 
-default:
+defaults:
   - scope:
       path: ""
       type: "research-projects"
+    values:
+      layout: "default"
       
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
