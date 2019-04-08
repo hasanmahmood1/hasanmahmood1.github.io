@@ -42,15 +42,11 @@ body {
     border-bottom: 1px solid white;
 }
 
-@media only screen and (max-width: 700px) {
-    .laptop {
-	display: none!important;
-    }
-    .mobile {
-	display: block!important;
-    }
+p {
+    font-family: 'Lato';
+    font-size: 18px;
+    color: grey;
 }
-
 .bio {
     display: inline-block;
     width: 350px;
@@ -62,4 +58,14 @@ body {
     position: relative;
     top: -8px;
     color: #efcd83;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .laptop {
+	display: none!important;
+    }
+    .mobile {
+	display: block!important;
+    }
 }
