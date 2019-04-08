@@ -1,0 +1,18 @@
+<div class="ui basic segment" id="research">
+  <div class="ui container">
+    <h2 class="ui inverted center aligned icon header">
+      RESEARCH
+      <i class="lab icon"></i>
+      <div class="sub header">I work with</div>
+    </h2>
+    <div class="ui segments">
+      {% for project in site.research-projects %}
+      <div class="ui segment">
+      	<div class="ui dividing header">{{ project.title }}</div>
+	<p>{{ project.description }}</p>
+	<h4 class="ui header">Publications:</h4>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

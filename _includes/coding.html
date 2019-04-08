@@ -1,0 +1,36 @@
+<div class="ui basic segment" id="coding" style="margin-bottom: 0">
+  <div class="ui container">
+    <h2 class="ui center aligned icon header">
+      CODING
+      <i class="red code icon"></i>
+      <div class="sub header">My Coding Projects</div>
+    </h2>
+
+    <div class="ui segments">
+      {% for project in site.coding-projects %}
+      <div class="ui segment">
+	<div class="ui grid">
+	  <div class="six wide column">
+	    <div class="ui header">
+	      <img class="ui {{ project.avatar-size }} image" src="{{ project.avatar }}"/>
+	      {{ project.title }}
+	    </div>
+	    <a href="{{ project.web-link }}">
+	      <i class="ui large linkify icon"></i>
+	    </a>
+	    {% if project.git-link %}
+	    |
+	    <a href="{{ project.git-link }}">
+	      <i class="ui large github icon"></i>
+	    </a>
+	    {% endif %}
+	  </div>
+	  <div class="ten wide column">
+	    <p>{{ project.description }}</p>
+	  </div>	  
+	</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
