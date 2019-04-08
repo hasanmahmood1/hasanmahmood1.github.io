@@ -1,40 +1,27 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+.laptop {
+    display: inherit;
+}
+.mobile {
+    display: none;
+}
+.brand {
+    font-weight: bold!important;
+    font-size: 18px;
+}
+.ui.secondary.pointing.menu {
+    border: none;
+    border-bottom: 1px solid white;
 }
 
-body {
-    background: #eee;
-    color: black;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-
-p, .mono {
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-.muted {
-    color: grey;
-}
-
-.hline {
- 	width: 20px;
-	margin: 3px;
-	padding-left: 20%;
-	border-bottom: 5px dashed black;
-}
-
-a {
-    text-decoration: none;
-    color: crimson;
-    :after {
-	display: block;
-	content: '';
-	border-bottom: 3px solid black;
-	transform: scaleX(0);
+@media only screen and (max-width: 600px) {
+    .laptop {
+	display: none!important;
     }
+    .mobile {
+	display: inherit;
+    }
+}
+.ui.masthead.segment {
+    background: linear-gradient(135deg, rgba(24,42,115,1) 0%, rgba(33,138,174,1) 69%,
+    			       rgba(32,167,172,1) 89%)!important;
 }
