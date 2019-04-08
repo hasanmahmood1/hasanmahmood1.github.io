@@ -60,6 +60,25 @@ p {
     color: #efcd83;
 }
 
+a.styled {
+    display: inline-block;
+    border: 2px solid white;
+    color: #efcd83;
+    border-width: 0;
+}
+
+a.styled::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #efcd83;
+    transition: width 0.3s;
+}
+a.styled:hover::after {
+    width: 100%;
+    
+}
 
 @media only screen and (max-width: 700px) {
     .laptop {
@@ -69,3 +88,4 @@ p {
 	display: block!important;
     }
 }
+
