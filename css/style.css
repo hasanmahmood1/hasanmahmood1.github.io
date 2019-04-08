@@ -22,6 +22,12 @@ body {
 				rgba(115,107,147,1) 48%,
     				rgba(243,201,215,1) 100%);    
 }
+#coding {
+    min-height: 60vh;
+}
+#academics {
+    min-height: 60vh;
+}
 
 .laptop {
     display: inherit;
