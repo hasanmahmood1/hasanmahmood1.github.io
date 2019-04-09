@@ -1,41 +1,19 @@
-<div class="ui center aligned basic segment container" id="academics">
-  <div class="ui warning message">
-    <i class="large yellow exclamation triangle icon"></i>Under construction
-  </div>
+<div class="ui center aligned basic segment container" id="teaching">
   <h2 class="ui  icon header">
-     ACADEMICS
+     TEACHING
    <i class="ui blue university icon"></i>
     <div class="sub header">
-      I am a math PhD student at Tulane University. 
+      I am teaching course at Tulane Unisersity. 
     </div>
   </h2>
 
-  <div class="ui four column divided stackable center aligned padded grid">
-    <div class="row">
-      <div class="column">
-	  <img class="ui tiny centered circular image" src="assets/seakhala.jpeg"/>
-	<div class="ui header">
-	  Seakhala Benimadhab Higher Secondary School
-	</div>
-      </div> 
-      <div class="column">
-	<img class="ui tiny centered circular image" src="assets/vidya.jpeg"/>	
-	<div class="ui header">
-	  Ramakrishna Mission Vidyamandira
-	</div>
+  <div class="ui raised segments">
+    {% for course in site.teaching %}
+    <div class="ui segment">
+      <div class="ui header">
+	{{ course.title }}
       </div>
-      <div class="column">
-	<img class="ui tiny centered circular image" src="assets/seakhala.jpeg"/>
-      	<div class="ui header">
-	  TIFR, Bangalore
-	</div>
-      </div>
-      <div class="column">
-	<img class="ui tiny centered circular image" src="assets/seakhala.jpeg"/>
-      	<div class="ui header">
-	  Tulane University
-	</div>
-      </div>
-    </div>
+    </div> 
+    {% endfor %}
   </div>
 </div>
