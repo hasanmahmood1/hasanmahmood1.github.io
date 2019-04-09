@@ -4,5 +4,5 @@ web-link: http://smajhi.com/visual-topology
 git-link: https://github.com/sushovan4/visual-topology
 avatar: assets/vis-top.png
 avatar-size: small
-description: This is a JS driven client-based visualization tool
 ---
+This is a JS driven client-based visualization tool

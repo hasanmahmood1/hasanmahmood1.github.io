@@ -70,8 +70,7 @@ p {
 
 a.styled {
     display: inline-block;
-    border: 2px solid white;
-    color: #efcd83;
+    color: #00cc99;
     border-width: 0;
 }
 
@@ -79,8 +78,8 @@ a.styled::after {
     content: "";
     display: block;
     width: 0;
-    height: 2px;
-    background: #efcd83;
+    height: 3px;
+    background: #00cc99;
     transition: width 0.3s;
 }
 a.styled:hover::after {
