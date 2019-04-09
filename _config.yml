@@ -14,7 +14,7 @@ plugins:
   - jekyll-sitemap	
 collections:		
   research-projects:
-    output: true
+    output: false
   coding-projects:
     output: false
   teaching:
