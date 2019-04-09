@@ -17,6 +17,8 @@ collections:
     output: true
   coding-projects:
     output: false
+  teaching:
+    output: false 
 
 defaults:
   - scope:
