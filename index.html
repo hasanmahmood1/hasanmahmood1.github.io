@@ -1,8 +1,16 @@
 ---
 layout: home
 title: HOME
+masthead: true
 ---
 {% include masthead.html %}
 {% include academics.html %}
 {% include research.html %}
 {% include coding.html %}
+
+
+<script>
+$(document).ready(function( ){
+ $('.ui.menu .home.item').addClass('active');
+});
+</script>

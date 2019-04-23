@@ -13,8 +13,12 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap	
 collections:
+  category:
+    output: true
+  tag:
+    output: true
   research-projects:
-    output: false
+    output: true
   coding-projects:
     output: false
   teaching:
@@ -25,7 +29,17 @@ defaults:
       path: ""
       type: "research-projects"
     values:
-      layout: "default"
+      layout: "project"
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
+  - scope:
+      path: ""
+      type: tag
+    values:
+      layout: "tag"
       
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

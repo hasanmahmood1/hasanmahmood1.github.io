@@ -21,7 +21,14 @@ base_title: Sushovan Majhi
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    {{ content }}
+    {% unless page.masthead %}
+    <div class="ui inverted basic segment">
+      {% include menu.html %}
+    </div>
+    {% endunless %}
+    
+    <div class="main content">{{ content }}</div>
     {% include footer.html %}
   </body>
 </html>
+

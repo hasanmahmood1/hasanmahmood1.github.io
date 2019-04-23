@@ -1,9 +1,8 @@
 ---
-layout: home
+layout: 
 permalink: blog
 title: BLOG
 ---
-
 <div class="ui basic segment container">
   <div class="ui stackable grid">
     
@@ -44,10 +43,3 @@ title: BLOG
 
   </div>
 </div>
-
-
-<script>
-$(document).ready(function( ){
- $('.ui.menu .blog.item').addClass('active');
-});
-</script>
