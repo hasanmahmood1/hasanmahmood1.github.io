@@ -1,18 +1,34 @@
 ---
-layout: blog
+layout: home
 ---
+
+<div class="ui basic container segment">
+  <a href="/blog">
+    <i class="large chevron left icon"></i><u>All Posts</u>
+  </a>
+</div>
+
 <div class="ui container basic center aligned segment">
   <h1 class="ui header">
     {{ page.title }}
-    <div class="sub header">Posted {{ page.date }}</div>
+    <div class="sub header">Posted on {{ page.date | date: "%B %d, %Y" }}</div>
   </h1>
-  Category: <div class="ui label">{{ page.categories }}</div>
+  <div class="ui grey label">{{ page.categories }}</div>
   <br>
   {% for tag in page.tags %}
-   #{{ tag }}&nbsp;
+  #{{ tag }}&nbsp;
   {% endfor %}
+  <br>
+  <div class="ui facebook icon button"><i class="ui facebook f icon"></i></div>
+  <div class="ui red icon button"><i class="ui google icon"></i></div>
 </div>
 
-<div class="ui container basic segment">
-  <p class="post">{{ content }}</p>
+<div class="ui container basic post segment">
+  {{ content }}
 </div>
+
+<script>
+  $(document).ready(function( ){
+  $('.ui.menu .blog.item').addClass('active');
+  });
+</script>

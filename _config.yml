@@ -1,9 +1,9 @@
 # Welcome to Jekyll!
 title: Sushovan Majhi
 email: sushovan.majhi08@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "www.smajhi.com" # the base hostname & protocol for your site, e.g. http://example.com
+description: This is Sushovan Majhi's person homepage.
+baseurl: ""
+url: "https://www.smajhi.com"
 github_username: sushovan4
 
 # Build settings  
@@ -19,10 +19,6 @@ collections:
     output: true
   research-projects:
     output: true
-  coding-projects:
-    output: false
-  teaching:
-    output: false 
 
 defaults:
   - scope:
@@ -40,6 +36,11 @@ defaults:
       type: tag
     values:
       layout: "tag"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
       
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

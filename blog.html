@@ -3,29 +3,35 @@ layout: home
 permalink: blog
 title: Blog
 ---
-
 <div class="ui basic segment container">
   <div class="ui stackable grid">
     
     <div class="twelve wide column">
-      <h1 class="ui header">POSTS</h1>
+      <h1 class="ui center aligned header">POSTS</h1>
       <div class="ui segements">
-	{% for post in site.posts %}
-	<div class="ui basic segment">
-	<div class="ui horizontal divider">{{ post.date | date: "%B %-d" }}</div>
-	  <a href="{{ post.url }}">
-	    <h3 class="ui header">{{ post.title }}</h3>
-	  </a>
+	{% assign groupedByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y' " %}
+	{% for year in groupedByYear %}
+	<div class="ui horizontal divider" style="font-size: 1.4em">{{ year.name }}</div>
+	{% assign groupedByMonth = year.items | group_by_exp: "post", "post.date | date:'%B' " %}
+	{% for month in groupedByMonth %}
+	<h4 class="ui left aligned disabled header">{{ month.name }}</h4>
+	{% for post in month.items %}
+	<div class="ui raised segment">
+	  <div class="ui header" href="{{ post.url }}">
+	    <a class="styled" href={{ post.url }}>{{ post.title }}</a>
+	  </div>
 	  {% for cat in post.categories %}
-	  <div class="ui teal label">{{ cat }}</div>
+	  <i class="grey folder icon"></i>{{ cat }}
 	  {% endfor %}
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <i class="grey calendar icon"></i>{{ post.date | date: "%B %-d, %Y" }}
 	  <br>
 	  {% for tag in post.tags %}
 	  #{{ tag }}&nbsp;
 	  {% endfor %}
-	  <p>{{ post.intro | truncate: 100 }}</p>
 	</div>
-	
+	{% endfor %}
+	{% endfor %}
 	{% endfor %}
       </div>
     </div>
@@ -33,7 +39,7 @@ title: Blog
     <div class="four wide column">
       <h3 class="ui dividing header">Categories</h3>
       {% for category in site.categories %}
-      <div class="ui teal label" href="{{ category.url }}">{{ category[0] }}</div>
+      <div class="ui grey label" href="{{ category.url }}">{{ category[0] }}</div>
       {% endfor %}
 
       <h3 class="ui dividing header">Tags</h3>
