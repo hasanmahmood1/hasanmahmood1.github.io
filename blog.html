@@ -1,17 +1,18 @@
 ---
 layout: home
 permalink: blog
-title: BLOG
+title: Blog
 ---
 
 <div class="ui basic segment container">
   <div class="ui stackable grid">
     
     <div class="twelve wide column">
-      <h2 class="ui center aligned header">MY RECENT POSTS</h2>
+      <h1 class="ui header">POSTS</h1>
       <div class="ui segements">
 	{% for post in site.posts %}
-	<div class="ui raised segment">
+	<div class="ui basic segment">
+	<div class="ui horizontal divider">{{ post.date | date: "%B %-d" }}</div>
 	  <a href="{{ post.url }}">
 	    <h3 class="ui header">{{ post.title }}</h3>
 	  </a>
