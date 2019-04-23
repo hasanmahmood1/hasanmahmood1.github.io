@@ -12,7 +12,7 @@ theme: minima
 plugins:		
   - jekyll-feed
   - jekyll-sitemap	
-collections:		
+collections:
   research-projects:
     output: false
   coding-projects:
