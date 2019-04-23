@@ -1,7 +1,18 @@
 ---
 layout: blog
 ---
+<div class="ui container basic center aligned segment">
+  <h1 class="ui header">
+    {{ page.title }}
+    <div class="sub header">Posted {{ page.date }}</div>
+  </h1>
+  Category: <div class="ui label">{{ page.categories }}</div>
+  <br>
+  {% for tag in page.tags %}
+   #{{ tag }}&nbsp;
+  {% endfor %}
+</div>
+
 <div class="ui container basic segment">
-  <h1 class="ui dividing header">{{ page.title }}</h1>
-  <p>{{ page.content }}</p>
+  <p class="post">{{ content }}</p>
 </div>

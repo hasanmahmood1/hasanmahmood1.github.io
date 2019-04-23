@@ -1,3 +1,7 @@
+.main.content {
+    min-height: 100vh;
+}
+
 body {
     font-family: 'Comfortaa', cursive;
 }
@@ -85,6 +89,10 @@ a.styled::after {
 a.styled:hover::after {
     width: 100%;
     
+}
+
+p.post {
+    font-size: 32px;
 }
 
 @media only screen and (max-width: 700px) {
