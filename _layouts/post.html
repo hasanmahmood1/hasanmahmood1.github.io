@@ -11,14 +11,24 @@ layout: home
 <div class="ui container basic center aligned segment">
   <h1 class="ui header">
     {{ page.title }}
-    <div class="sub header">Posted on {{ page.date | date: "%B %d, %Y" }}</div>
   </h1>
-  <div class="ui grey label">{{ page.categories }}</div>
-  <br>
+  <div class="ui three column grid">
+    <div class="column">
+      {% for cat in page.categories %}
+      <i class="red folder circular icon"></i>{{ cat }}
+      {% endfor %}
+    </div>
+    <div class="column">
+      <i class="red calendar circular icon"></i>{{ page.date | date: "%B %-d, %Y" }}
+    </div>
+    <div class="column">
+      <i class="red user circular icon"></i>{{ page.author }}
+    </div>
+  </div>
   {% for tag in page.tags %}
-  #{{ tag }}&nbsp;
+  <a class="styled">#{{ tag }}&nbsp;</a>
   {% endfor %}
-  <br>
+  <br><br>
   <div class="ui facebook icon button"><i class="ui facebook f icon"></i></div>
   <div class="ui red icon button"><i class="ui google icon"></i></div>
 </div>
