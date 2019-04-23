@@ -13,14 +13,19 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap	
 collections:
-  category:
-    output: true
-  tag:
-    output: true
   research-projects:
     output: true
+  teaching:
+    output: false
+  coding-projects:
+    output: false
 
 defaults:
+  - scope:
+      path: ""
+      type: "teaching"
+    values:
+      layout: "project"
   - scope:
       path: ""
       type: "research-projects"
