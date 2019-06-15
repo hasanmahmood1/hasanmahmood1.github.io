@@ -7,9 +7,7 @@ title: Blog
   <div class="ui stackable grid">
     
     <div class="twelve wide column">
-      <h1 class="ui center aligned header">POSTS</h1>
-      <div class="ui segements">
-	{% assign groupedByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y' " %}
+    	{% assign groupedByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y' " %}
 	{% for year in groupedByYear %}
 	<div class="ui horizontal divider" style="font-size: 1.4em;color: grey">
 	  {{ year.name }}
@@ -18,27 +16,30 @@ title: Blog
 	{% for month in groupedByMonth %}
 	<h4 class="ui center aligned disabled header">{{ month.name }}</h4>
 	{% for post in month.items %}
-	<div class="ui raised red segment">
-	  <div class="ui header">
-	    <div class="ui red label">{{ post.categories }}</div>
-	    <span class="disabled">/</span>
-	    <a class="styled" href={{ post.url }}>{{ post.title }}</a>
+	<div class="ui segments">
+	  <div class="ui segment">
+	    <div class="ui label">{{ post.categories }}</div>
+	    <a href="{{ post.url }}">
+	      <h1  class="ui header">  
+		<u>{{ post.title }}</u>
+	      </h1>
+	    </a>
+	    
+	    <i class="red circular user icon"></i><span class="disabled">{{ post.author }}</span>
+	    &nbsp;&nbsp;
+	    <i class="red circular calendar icon"></i><span class="disabled">
+	      {{ post.date | date: "%B %d, %Y"}}</span>  
 	  </div>
-	  <i class="red circular user icon"></i><span class="disabled">{{ post.author }}</span>
-	  &nbsp;&nbsp;
-	  <i class="red circular calendar icon"></i><span class="disabled">
-	    {{ post.date | date: "%B %d, %Y"}}</span>  
 	</div>
+   	{% endfor %}
 	{% endfor %}
 	{% endfor %}
-	{% endfor %}
-      </div>
     </div>
     
     <div class="four wide column">
       <h3 class="ui dividing header">Categories</h3>
       {% for category in site.categories %}
-      <div class="ui grey label" href="{{ category.url }}">{{ category[0] }}</div>
+      <div class="ui label" href="{{ category.url }}">{{ category[0] }}</div>
       {% endfor %}
 
       <h3 class="ui dividing header">Tags</h3>
