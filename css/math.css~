@@ -1,0 +1,3 @@
+theorem:after {
+    content: "Theorem"
+}

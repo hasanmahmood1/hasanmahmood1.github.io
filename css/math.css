@@ -1,0 +1,19 @@
+theorem, corollary {
+    display: block;
+    font-style: italic;
+}
+
+section {
+    display: block;
+    font-family: header;
+    font-style: bold;
+    font-size: 2em;
+}
+
+subsection {
+    display: block;
+    font-family: header;
+    font-style: bold;
+    font-size: 1.5em;
+}
+

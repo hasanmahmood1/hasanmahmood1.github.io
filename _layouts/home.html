@@ -16,12 +16,17 @@ base_title: Sushovan Majhi
     <link rel="stylesheet"
 	  href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/math.css">
     <link rel="stylesheet" type="text/css"
 	  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
 	    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 	    crossorigin="anonymous">
     </script>
+    <script type="text/javascript" async
+	    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
     <link rel="stylesheet" type="text/css" href="/css/slick/slick-theme.css"/>
   </head>
   <body>
@@ -39,6 +44,12 @@ base_title: Sushovan Majhi
     <script type="text/javascript"
 	    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/js/homepage.js"></script>
-</body>
+    <script src="/js/math.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+  </body>
 </html>
 
