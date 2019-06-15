@@ -1,8 +1,8 @@
 ---
-title: How to Write Math
+title: How to Write Mathematics in Jekyll
 categories: Mathematics
 ---
-
+    
 <section>Introduction</section>
 This is a test document.
 This is a test document.
@@ -31,7 +31,7 @@ The above theorem immediately implies the following corollary:
 </corollary>
 
 
-<section>Introduction</section>
+<section>Conclusion</section>
 This is a test document.
 This is a test document.
 This is a test document.
