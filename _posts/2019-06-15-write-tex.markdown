@@ -1,6 +1,7 @@
 ---
 title: How to Write Math
 categories: Mathematics
+published: false
 ---
 
 <section>Introduction</section>
